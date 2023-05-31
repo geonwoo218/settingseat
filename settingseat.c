@@ -6,10 +6,15 @@ int main(){
     int studentcount;
     int student[100]={0,};
     int seat[100]={0,};
+    int startnumber;
 	int i,j;
+	
     printf("학생 수를 입력하세요: ");
     scanf("%d",&studentcount);
 
+	printf("학번 시작 번호를 입력하세요: ");
+	scanf("%d",&startnumber);
+	
     if(studentcount>100){
         printf("최대 학생 수는 100명입니다.\n");
         return 1;
@@ -17,7 +22,7 @@ int main(){
 
     //학번 생성
     for(i = 0 ; i < studentcount ; i++){
-        student[i] = 20501 +i;
+        student[i] = startnumber +i;
     }
 
      //rand 함수를 위한 시드값 설정
