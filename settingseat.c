@@ -7,28 +7,28 @@ int main(){
     int student[100]={0,};
     int seat[100]={0,};
     int startnumber;
-	int i,j;
+    int i,j;
 	
-    printf("ÇĞ»ı ¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("í•™ìƒ ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
     scanf("%d",&studentcount);
 
-	printf("ÇĞ¹ø ½ÃÀÛ ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
-	scanf("%d",&startnumber);
+    printf("í•™ë²ˆ ì‹œì‘ ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+    scanf("%d",&startnumber);
 	
     if(studentcount>100){
-        printf("ÃÖ´ë ÇĞ»ı ¼ö´Â 100¸íÀÔ´Ï´Ù.\n");
+        printf("ìµœëŒ€ í•™ìƒ ìˆ˜ëŠ” 100ëª…ì…ë‹ˆë‹¤.\n");
         return 1;
     }
 
-    //ÇĞ¹ø »ı¼º
+    //í•™ë²ˆ ìƒì„±
     for(i = 0 ; i < studentcount ; i++){
         student[i] = startnumber +i;
     }
 
-     //rand ÇÔ¼ö¸¦ À§ÇÑ ½Ãµå°ª ¼³Á¤
+     //rand í•¨ìˆ˜ë¥¼ ìœ„í•œ ì‹œë“œê°’ ì„¤ì •
      srand(time(NULL));
 
-     //ÀÚ¸® ·£´ı ¹èÄ¡
+     //ìë¦¬ ëœë¤ ë°°ì¹˜
      for(i = 0;i<studentcount;i++){
      	seat[i]=rand()%studentcount+1;
      	for(j = 0;j<i;j++){
@@ -37,9 +37,9 @@ int main(){
 		 }
 	 }
 
-     printf("ÀÚ¸® ¹èÄ¡ °á°ú: \n");
+     printf("ìë¦¬ ë°°ì¹˜ ê²°ê³¼: \n");
      for(i=0;i<studentcount;i++){
-        printf("ÇĞ¹ø: %d \tÀÚ¸®: %2d¹ø\n",student[i],seat[i]);
+        printf("í•™ë²ˆ: %d \tìë¦¬: %2dë²ˆ\n",student[i],seat[i]);
      }
 
      return 0;
